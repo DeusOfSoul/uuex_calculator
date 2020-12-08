@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Admin from "../views/Admin";
 import Calculator from "../views/Calculator";
 import Start from "../views/Start";
+import CalculatorTest from "../views/CalculatorTest";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/calculator',
     name: 'calculator',
     component: Calculator
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: CalculatorTest
   }
 ]
 

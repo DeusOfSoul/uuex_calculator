@@ -123,20 +123,6 @@
                                     Weiter
                                 </button>
                             </div>
-
-                            <!--<a>Sie möchten umziehen</a>
-                            <div class="form-group row">
-                                <div class="row">
-                                    <label for="plz1" class="col-form-label">von</label>
-                                    <input id="plz1" type="text" class="form-control" placeholder="PLZ">
-                                </div>
-                            </div>
-                            <div class="button-row d-flex mt-4">
-                                <button v-on:click="WeiterStep" class="btn btn-primary ml-auto" type="button"
-                                        title="Weiter">
-                                    Weiter
-                                </button>
-                            </div>-->
                         </div>
 
                         <!--single form panel-->
@@ -151,8 +137,8 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="dropdown-toggle col-sm-4" data-toggle="collapse"
-                                           href="#collapseExample" role="button" aria-expanded="false"
-                                           aria-controls="collapseExample">
+                                            href="#collapseExample" role="button" aria-expanded="false"
+                                            aria-controls="collapseExample">
                                             Wohnzimmer
                                         </h4>
                                     </div>
@@ -164,8 +150,8 @@
                                                     <tr>
                                                         <th scope="col">#</th>
                                                         <th scope="col">Möbel</th>
-                                                        <th scope="col">Anzahl</th>
-                                                        <th scope="col">
+                                                        <th class="col-sm-2" scope="col">Anzahl</th>
+                                                        <th class="text-center" scope="col">
                                                             <div class="custom-control custom-checkbox">
                                                                 <input type="checkbox" class="custom-control-input"
                                                                        id="tableDefaultCheck1">
@@ -173,60 +159,82 @@
                                                                        for="tableDefaultCheck1">Auf-/Abbau</label>
                                                             </div>
                                                         </th>
-                                                        <th scope="col"></th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
                                                         <th scope="row">1</th>
-                                                        <td>Mark</td>
-                                                        <td> 3</td>
+                                                        <td>Beistelltisch</td>
                                                         <td>
-                                                            <div class="custom-control custom-checkbox">
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                        value="0">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
+                                                                <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3" checked>
+                                                                <label class="custom-control-label" for="tableDefaultCheck3"></label>
+                                                            </div>
+                                                        </td>
+                                    
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>1-Türiger Kleiderschrank</td>
+                                                        <td>
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                        value="0">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
                                                                 <input type="checkbox" class="custom-control-input"
                                                                        id="tableDefaultCheck3" checked>
                                                                 <label class="custom-control-label"
-                                                                       for="tableDefaultCheck3">Check
-                                                                    2</label>
+                                                                       for="tableDefaultCheck3"></label>
                                                             </div>
                                                         </td>
-                                                        <th scope="row">
-                                                            <button class="btn btn-danger">entfernen</button>
-                                                        </th>
+                                    
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>Mark</td>
-                                                        <td> 3</td>
+                                                        <th scope="row">3</th>
+                                                        <td>2-türiger Kleiderschrank</td>
                                                         <td>
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                       id="tableDefaultCheck4" checked>
-                                                                <label class="custom-control-label"
-                                                                       for="tableDefaultCheck4">Check
-                                                                    2</label>
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                        value="0">
                                                             </div>
                                                         </td>
-                                                        <th scope="row">
-                                                            <button class="btn btn-danger">entfernen</button>
-                                                        </th>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                       id="tableDefaultCheck3">
+                                                                <label class="custom-control-label"
+                                                                       for="tableDefaultCheck3"></label>
+                                                            </div>
+                                                        </td>
+                                    
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>Mark</td>
-                                                        <td> 3</td>
+                                                        <th scope="row">4</th>
+                                                        <td>Einzelbett + Matratze</td>
                                                         <td>
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                       id="tableDefaultCheck4" checked>
-                                                                <label class="custom-control-label"
-                                                                       for="tableDefaultCheck4">Check
-                                                                    2</label>
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                        value="0">
                                                             </div>
                                                         </td>
-                                                        <th scope="row">
-                                                            <button class="btn btn-danger">entfernen</button>
-                                                        </th>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                       id="tableDefaultCheck3" checked>
+                                                                <label class="custom-control-label"
+                                                                       for="tableDefaultCheck3"></label>
+                                                            </div>
+                                                        </td>
+                                    
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -234,22 +242,136 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <br>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <select class="form-control">
-                                        <option selected disabled>Wähle...</option>
-                                        <option>Wohnzimmer</option>
-                                        <option>Schlafzimmer</option>
-                                        <option>Kinderzimmer</option>
-                                        <option>Esszimmer</option>
-                                        <option>Küche</option>
-                                    </select>
+                                <br>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="dropdown-toggle col-sm-4" data-toggle="collapse"
+                                            href="#collapseExample2" role="button" aria-expanded="false"
+                                            aria-controls="collapseExample2">
+                                            Schlafzimmer
+                                        </h4>
+                                    </div>
+                                    <div class="collapse" id="collapseExample2">
+                                        <div class="card-body">
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-striped table-sm table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Möbel</th>
+                                                        <th class="col-sm-2" scope="col">Anzahl</th>
+                                                        <th class="text-center" scope="col">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                       id="tableDefaultCheck1">
+                                                                <label class="custom-control-label"
+                                                                       for="tableDefaultCheck1">Auf-/Abbau</label>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Beistelltisch</td>
+                                                        <td>
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                       value="0">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
+                                                                <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3" checked>
+                                                                <label class="custom-control-label" for="tableDefaultCheck3"></label>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>1-Türiger Kleiderschrank</td>
+                                                        <td>
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                       value="0">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                       id="tableDefaultCheck3" checked>
+                                                                <label class="custom-control-label"
+                                                                       for="tableDefaultCheck3"></label>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>2-türiger Kleiderschrank</td>
+                                                        <td>
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                       value="0">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                       id="tableDefaultCheck3">
+                                                                <label class="custom-control-label"
+                                                                       for="tableDefaultCheck3"></label>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Einzelbett + Matratze</td>
+                                                        <td>
+                                                            <div>
+                                                                <input type="number" class="form-control"
+                                                                       value="0">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-checkbox text-center">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                       id="tableDefaultCheck3" checked>
+                                                                <label class="custom-control-label"
+                                                                       for="tableDefaultCheck3"></label>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <button class="btn btn-secondary">+ Raum hinzufügen</button>
+                                <br>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <select class="form-control">
+                                            <option selected disabled>Wähle...</option>
+                                            <option>Wohnzimmer</option>
+                                            <option>Schlafzimmer</option>
+                                            <option>Kinderzimmer</option>
+                                            <option>Esszimmer</option>
+                                            <option>Küche</option>
+                                            <option>Keller</option>
+                                            <option>Speicher</option>
+                                            <option>Garage</option>
+                                            <option>Sonstiges</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <button class="btn btn-secondary">+ Raum hinzufügen</button>
+                                    </div>
                                 </div>
+                                <br>
                             </div>
 
 
@@ -375,8 +497,8 @@
                     moving: 1,
                     garbage: 2
                 },
-                currentPage: 3,
-                currentWorkType: 1
+                currentPage: 1,
+                currentWorkType: 0
             })
 
             function nextStep(value = null) {
