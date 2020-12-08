@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "bootstrap-steps": "^1.0.3",
+    "bootstrap-vue": "^2.20.1",
     "core-js": "^3.6.5",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
