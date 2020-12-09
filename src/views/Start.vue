@@ -2,7 +2,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <router-link to="admin">
+                <router-link to="login">
                     <button class="btn btn-primary">Admin</button>
                 </router-link>
             </div>
