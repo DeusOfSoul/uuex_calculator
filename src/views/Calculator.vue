@@ -17,7 +17,7 @@
                                 class="multisteps-form__progress-btn " type="button" title="Raumangaben">Objektangaben
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 4}"
-                                class="multisteps-form__progress-btn " type="button" title="Raumangaben">Sonderleitungen
+                                class="multisteps-form__progress-btn " type="button" title="Raumangaben">Sonderleistungen
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 5}"
                                 class="multisteps-form__progress-btn " type="button" title="Order Info">Bilder
@@ -374,28 +374,27 @@
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
-
                                     </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <select class="form-control">
-                                        <option selected disabled>Wähle...</option>
-                                        <option>Wohnzimmer</option>
-                                        <option>Schlafzimmer</option>
-                                        <option>Kinderzimmer</option>
-                                        <option>Esszimmer</option>
-                                        <option>Küche</option>
-                                        <option>Keller</option>
-                                        <option>Speicher</option>
-                                        <option>Garage</option>
-                                        <option>Sonstiges</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <button class="btn btn-secondary">+ Raum hinzufügen</button>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <select class="form-control">
+                                            <option selected disabled>Wähle...</option>
+                                            <option>Wohnzimmer</option>
+                                            <option>Schlafzimmer</option>
+                                            <option>Kinderzimmer</option>
+                                            <option>Esszimmer</option>
+                                            <option>Küche</option>
+                                            <option>Keller</option>
+                                            <option>Speicher</option>
+                                            <option>Garage</option>
+                                            <option>Sonstiges</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <button class="btn btn-secondary">+ Raum hinzufügen</button>
+                                    </div>
                                 </div>
                             </div>
 
