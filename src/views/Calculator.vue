@@ -551,7 +551,6 @@
         </div>
     </div>
 
-
     <!--    Page 1   -->
     <div v-if="state.currentPage === 1">
     </div>
