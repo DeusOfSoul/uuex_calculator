@@ -17,7 +17,8 @@
                                 class="multisteps-form__progress-btn " type="button" title="Raumangaben">Objektangaben
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 4}"
-                                class="multisteps-form__progress-btn " type="button" title="Raumangaben">Sonderleistungen
+                                class="multisteps-form__progress-btn " type="button" title="Raumangaben">
+                            Sonderleistungen
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 5}"
                                 class="multisteps-form__progress-btn " type="button" title="Order Info">Bilder
@@ -31,10 +32,10 @@
 
             <!--form panels-->
             <div class="row">
-                <!--                <div class="col-12 col-lg-8 m-auto">-->
                 <div class=" col m-auto">
                     <form class="multisteps-form__form">
 
+                        <!-- Startseite -->
                         <div v-bind:class="{'js-active' : state.currentPage === 1}"
                              class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
                             <h1 class="multisteps-form__title">Auswahl</h1>
@@ -57,7 +58,8 @@
                             </div>
 
                         </div>
-                        <!--single form panel-->
+
+                        <!-- Grunddaten -->
                         <div v-bind:class="{'js-active' : state.currentPage === 2}"
                              class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
                             <h1 class="multisteps-form__title">Grunddaten</h1>
@@ -135,7 +137,7 @@
                             </div>
                         </div>
 
-                        <!--single form panel-->
+                        <!-- Objektangaben -->
                         <div v-bind:class="{'js-active' : state.currentPage === 3}"
                              class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
                             <h1 class="multisteps-form__title">Objektangaben</h1>
@@ -144,119 +146,8 @@
                             <!-- Moving -->
 
                             <div v-if="state.currentWorkType === state.workTypes.moving">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="dropdown-toggle col-sm-4" data-toggle="collapse"
-                                            href="#collapseExample" role="button" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Wohnzimmer
-                                        </h4>
-                                    </div>
-                                    <div class="collapse" id="collapseExample">
-                                        <div class="card-body">
-                                            <div class="table-responsive-sm">
-                                                <table class="table table-striped table-sm table-bordered">
-                                                    <thead>
-                                                    <tr>
-                                                        <th scope="col">#</th>
-                                                        <th scope="col">Möbel</th>
-                                                        <th class="col-sm-2" scope="col">Anzahl</th>
-                                                        <th class="text-center" scope="col">
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                       id="tableDefaultCheck1">
-                                                                <label class="custom-control-label"
-                                                                       for="tableDefaultCheck1">Auf-/Abbau</label>
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>Beistelltisch</td>
-                                                        <td>
-                                                            <div>
-                                                                <input type="number" class="form-control"
-                                                                       value="0">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="custom-control custom-checkbox text-center">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                       id="tableDefaultCheck3" checked>
-                                                                <label class="custom-control-label"
-                                                                       for="tableDefaultCheck3"></label>
-                                                            </div>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2</th>
-                                                        <td>1-Türiger Kleiderschrank</td>
-                                                        <td>
-                                                            <div>
-                                                                <input type="number" class="form-control"
-                                                                       value="0">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="custom-control custom-checkbox text-center">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                       id="tableDefaultCheck3" checked>
-                                                                <label class="custom-control-label"
-                                                                       for="tableDefaultCheck3"></label>
-                                                            </div>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">3</th>
-                                                        <td>2-türiger Kleiderschrank</td>
-                                                        <td>
-                                                            <div>
-                                                                <input type="number" class="form-control"
-                                                                       value="0">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="custom-control custom-checkbox text-center">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                       id="tableDefaultCheck3">
-                                                                <label class="custom-control-label"
-                                                                       for="tableDefaultCheck3"></label>
-                                                            </div>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">4</th>
-                                                        <td>Einzelbett + Matratze</td>
-                                                        <td>
-                                                            <div>
-                                                                <input type="number" class="form-control"
-                                                                       value="0">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="custom-control custom-checkbox text-center">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                       id="tableDefaultCheck3" checked>
-                                                                <label class="custom-control-label"
-                                                                       for="tableDefaultCheck3"></label>
-                                                            </div>
-                                                        </td>
-
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <br>
                                 <TableRoom></TableRoom>
-                                <br>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <select class="form-control">
@@ -358,19 +249,22 @@
                                         </td>
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
-                                                <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3" checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                       id="tableDefaultCheck3" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
-                                                <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3" checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                       id="tableDefaultCheck3" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
-                                                <input type="checkbox" class="custom-control-input" id="tableDefaultCheck3" checked>
+                                                <input type="checkbox" class="custom-control-input"
+                                                       id="tableDefaultCheck3" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
@@ -568,7 +462,7 @@
 
 <script>
     import {reactive} from 'vue';
-    import TableRoom from "../components/TableRoom";
+    import TableRoom from "../components/RoomTable";
 
     export default {
         name: "Calculator",
