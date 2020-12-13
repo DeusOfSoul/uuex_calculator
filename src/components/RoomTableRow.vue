@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <th scope="row">1</th>
+        <td>1</td>
         <!-- Name-->
         <td>{{name}}</td>
         <!-- Anzahl-->
@@ -13,7 +13,7 @@
         <!-- Volumen-->
         <td>
             <div>
-                <input type="tel" class="form-control" min="0"
+                <input type="text" class="form-control" min="0"
                        :value="volumen">
             </div>
         </td>

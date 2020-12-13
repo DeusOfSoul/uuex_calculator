@@ -1,7 +1,11 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
 $theme-colors: (
-        "primary": #ffdc10,
+        "primary": #fde900,
         "danger": #ff3333,
-        "dark": #ccc
+        "dark": #ccc,
+        //"secondary": #a3a3a3
 );
 
 @import "node_modules/bootstrap/scss/bootstrap";

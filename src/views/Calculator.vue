@@ -8,23 +8,27 @@
                     <div class="multisteps-form__progress">
                         <button v-bind:class="{'js-active' : state.currentPage >= 1}"
                                 class="multisteps-form__progress-btn js-active" title="Auswahl Info" type="button">
-                            Auswahl
+                            <a v-bind:class="state.currentPage >= 1 ?  'text_active' : 'text_passiv'">Auswahl</a>
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 2}"
-                                class="multisteps-form__progress-btn " type="button" title="Grunddaten">Grunddaten
+                                class="multisteps-form__progress-btn " type="button" title="Grunddaten">
+                            <a v-bind:class="state.currentPage >= 2 ?  'text_active' : 'text_passiv'">Grunddaten</a>
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 3}"
-                                class="multisteps-form__progress-btn " type="button" title="Raumangaben">Objektangaben
+                                class="multisteps-form__progress-btn " type="button" title="Objektangaben">
+                            <a v-bind:class="state.currentPage >= 3 ?  'text_active' : 'text_passiv'">Objektangaben</a>
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 4}"
-                                class="multisteps-form__progress-btn " type="button" title="Raumangaben">
-                            Sonderleistungen
+                                class="multisteps-form__progress-btn " type="button" title="Sonderleistungen">
+                            <a v-bind:class="state.currentPage >= 4 ?  'text_active' : 'text_passiv'">Sonderleistungen</a>
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 5}"
-                                class="multisteps-form__progress-btn " type="button" title="Order Info">Bilder
+                                class="multisteps-form__progress-btn " type="button" title="Bilder">
+                            <a v-bind:class="state.currentPage >= 5 ?  'text_active' : 'text_passiv'">Bilder</a>
                         </button>
                         <button v-bind:class="{'js-active' : state.currentPage >= 6}"
-                                class="multisteps-form__progress-btn" type="button" title="Comments">Bestätigen
+                                class="multisteps-form__progress-btn" type="button" title="Bestätigen">
+                            <a v-bind:class="state.currentPage >= 6 ?  'text_active' : 'text_passiv'">Bestätigen</a>
                         </button>
                     </div>
                 </div>
@@ -46,6 +50,7 @@
                                         Umziehen
                                     </button>
                                 </div>
+                                <br>
                                 <div>
                                     <a>oder</a>
                                 </div>
@@ -67,7 +72,7 @@
                                 <h4>Startort</h4>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputCity">Startort</label>
+                                        <label for="inputCity">Stadt</label>
                                         <input type="text" class="form-control" id="inputCity">
                                     </div>
                                     <div class="form-group col-md-2">
@@ -93,7 +98,7 @@
                                     <h4>Zielort</h4>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputCity2">Zielort</label>
+                                            <label for="inputCity2">Stadt</label>
                                             <input type="text" class="form-control" id="inputCity2">
                                         </div>
                                         <div class="form-group col-md-2">
@@ -113,8 +118,9 @@
                                             <input type="number" class="form-control" id="etage2">
                                         </div>
                                     </div>
+                                    <br>
                                     <div class="form-row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <label for="distance">Distanz zwischen Start und Zielort</label>
                                             <div class="input-group ">
                                                 <input type="number" class="form-control" id="distance">
@@ -124,30 +130,50 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <div class="col-md-4">
+                                            <label for="date">Umzugsdatum</label>
+                                            <input type="date" class="form-control" id="date">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="button-row d-flex mt-4">
-                                <button v-on:click="backStep" class="btn btn-secondary js-btn-Zurück" type="button"
-                                        title="Zurück">Zurück
-                                </button>
-                                <button v-on:click="nextStep" class="btn btn-primary ml-auto" type="button"
-                                        title="Weiter">
-                                    Weiter
-                                </button>
+                            <div class="d-flex justify-content-between mt-4">
+                                <div>
+                                    <button v-on:click="backStep" class="btn btn-secondary " type="button"
+                                            title="Zurück">Zurück
+                                    </button>
+                                </div>
+                                <div>
+                                    <h5>Preis: {{state.costs}}</h5>
+                                </div>
+                                <div>
+                                    <h5>Volumen: {{state.volume}}</h5>
+                                </div>
+                                <div>
+                                    <button v-on:click="nextStep" class="btn btn-primary ml-auto" type="button"
+                                            title="Weiter">
+                                        Weiter
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Objektangaben -->
                         <div v-bind:class="{'js-active' : state.currentPage === 3}"
                              class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                            <h1 class="multisteps-form__title">Objektangaben</h1>
+                            <div class="d-flex justify-content-between align-self-center">
+                                <h1 class="multisteps-form__title">Objektangaben</h1>
+                            </div>
                             <br>
 
                             <!-- Moving -->
-
                             <div v-if="state.currentWorkType === state.workTypes.moving">
-                                <br>
-                                <TableRoom></TableRoom>
+                                <room-table v-for="room in rooms"
+                                            :key="room.id"
+                                            :room="room">
+                                </room-table>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <select class="form-control">
@@ -163,13 +189,12 @@
                                             <option>Sonstiges</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group ">
                                         <button class="btn btn-secondary">+ Raum hinzufügen</button>
                                     </div>
                                 </div>
                                 <br>
                             </div>
-
 
                             <!-- Garbage -->
                             <div v-if="state.currentWorkType === state.workTypes.garbage">
@@ -218,21 +243,21 @@
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
                                                 <input type="checkbox" class="custom-control-input"
-                                                       id="tableDefaultCheck3" checked>
+                                                       id="tableDefaultCheck23" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
                                                 <input type="checkbox" class="custom-control-input"
-                                                       id="tableDefaultCheck3" checked>
+                                                       id="tableDefaultCheck24" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
                                                 <input type="checkbox" class="custom-control-input"
-                                                       id="tableDefaultCheck3" checked>
+                                                       id="tableDefaultCheck25" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
@@ -250,14 +275,14 @@
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
                                                 <input type="checkbox" class="custom-control-input"
-                                                       id="tableDefaultCheck3" checked>
+                                                       id="tableDefaultCheck26" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="custom-control custom-checkbox text-center">
                                                 <input type="checkbox" class="custom-control-input"
-                                                       id="tableDefaultCheck3" checked>
+                                                       id="tableDefaultCheck27" checked>
                                                 <label class="custom-control-label" for="tableDefaultCheck3"></label>
                                             </div>
                                         </td>
@@ -293,14 +318,24 @@
                             </div>
 
 
-                            <div class="button-row d-flex mt-4">
-                                <button v-on:click="backStep" class="btn btn-secondary js-btn-Zurück" type="button"
-                                        title="Zurück">Zurück
-                                </button>
-                                <button v-on:click="nextStep" class="btn btn-primary ml-auto" type="button"
-                                        title="Weiter">
-                                    Weiter
-                                </button>
+                            <div class="d-flex justify-content-between mt-4">
+                                <div>
+                                    <button v-on:click="backStep" class="btn btn-secondary " type="button"
+                                            title="Zurück">Zurück
+                                    </button>
+                                </div>
+                                <div>
+                                    <h5>Preis: {{state.costs}}</h5>
+                                </div>
+                                <div>
+                                    <h5>Volumen: {{state.volume}}</h5>
+                                </div>
+                                <div>
+                                    <button v-on:click="nextStep" class="btn btn-primary ml-auto" type="button"
+                                            title="Weiter">
+                                        Weiter
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -308,7 +343,7 @@
                         <div v-bind:class="{'js-active' : state.currentPage === 4}"
                              class="multisteps-form__panel shadow p-4 rounded bg-white"
                              data-animation="scaleIn">
-                            <h3 class="multisteps-form__title">Sonderleistungen</h3>
+                            <h3>Sonderleistungen</h3>
                             <div class="multisteps-form__content">
 
                                 <!-- Moving -->
@@ -323,12 +358,19 @@
                                 <div class="row">
 
                                 </div>
-                                <div class="row">
-                                    <div class="button-row d-flex mt-4 col-12">
-                                        <button v-on:click="backStep" class="btn btn-secondary js-btn-Zurück"
-                                                type="button"
+                                <div class="d-flex justify-content-between mt-4">
+                                    <div>
+                                        <button v-on:click="backStep" class="btn btn-secondary " type="button"
                                                 title="Zurück">Zurück
                                         </button>
+                                    </div>
+                                    <div>
+                                        <h5>Preis: {{state.costs}}</h5>
+                                    </div>
+                                    <div>
+                                        <h5>Volumen: {{state.volume}}</h5>
+                                    </div>
+                                    <div>
                                         <button v-on:click="nextStep" class="btn btn-primary ml-auto" type="button"
                                                 title="Weiter">
                                             Weiter
@@ -341,7 +383,7 @@
                         <div v-bind:class="{'js-active' : state.currentPage === 5}"
                              class="multisteps-form__panel shadow p-4 rounded bg-white"
                              data-animation="scaleIn">
-                            <h3 class="multisteps-form__title">Bilder hinzufügen</h3>
+                            <h3>Bilder hinzufügen</h3>
                             <div class="multisteps-form__content">
                                 <div class="row">
                                     <div class="col-12 col-md-6 mt-4">
@@ -379,12 +421,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="button-row d-flex mt-4 col-12">
-                                        <button v-on:click="backStep" class="btn btn-secondary js-btn-Zurück"
-                                                type="button"
+                                <div class="d-flex justify-content-between mt-4">
+                                    <div>
+                                        <button v-on:click="backStep" class="btn btn-secondary " type="button"
                                                 title="Zurück">Zurück
                                         </button>
+                                    </div>
+                                    <div>
+                                        <h5>Preis: {{state.costs}}</h5>
+                                    </div>
+                                    <div>
+                                        <h5>Volumen: {{state.volume}}</h5>
+                                    </div>
+                                    <div>
                                         <button v-on:click="nextStep" class="btn btn-primary ml-auto" type="button"
                                                 title="Weiter">
                                             Weiter
@@ -430,10 +479,18 @@
                                         <input type="text" class="form-control" id="number">
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="agb">
+                                        <label class="form-check-label" for="agb">
+                                            Hiermit akzeptiere ich die AGBs und Datenschutz !!!!!!!!!!!!!! (nachbessern)
+                                        </label>
+                                    </div>
+                                </div>
                                 <button class="btn-warning btn">kostenloses Angebot anfordern</button>
 
                                 <div class="button-row d-flex mt-4">
-                                    <button v-on:click="backStep" class="btn btn-secondary js-btn-Zurück" type="button"
+                                    <button v-on:click="backStep" class="btn btn-secondary " type="button"
                                             title="Zurück">Zurück
                                     </button>
                                 </div>
@@ -445,28 +502,16 @@
         </div>
     </div>
 
-    <!--    Page 1   -->
-    <div v-if="state.currentPage === 1">
-    </div>
-
-    <div v-if="state.currentPage === 2">
-
-    </div>
-
-    <div v-if="state.currentPage === 3">
-
-    </div>
-
-
 </template>
 
 <script>
     import {reactive} from 'vue';
-    import TableRoom from "../components/RoomTable";
+    import RoomTable from "../components/RoomTable";
+    import {rooms} from '../assets/rooms'
 
     export default {
         name: "Calculator",
-        components: {TableRoom},
+        components: {RoomTable},
         setup: function () {
             const state = reactive({
                 workTypes: {
@@ -474,8 +519,10 @@
                     garbage: 2
                 },
                 currentPage: 1,
-                currentWorkType: 0
-            })
+                currentWorkType: 0,
+                costs: 0,
+                volume: 0
+            });
 
             function nextStep(value = null) {
                 if (value === state.workTypes.garbage || value === state.workTypes.moving) {
@@ -491,6 +538,7 @@
 
             return {
                 state,
+                rooms,
                 nextStep,
                 backStep
             }
@@ -498,7 +546,7 @@
     }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
     #file {
         border: 2px dashed #92b0b3 !important
     }
@@ -523,7 +571,7 @@
         display: inline-block;
         width: 100%;
         padding: 95px 0 0 100%;
-        background: url('https://i.imgur.com/VXWKoBD.png') top center no-repeat #fff;
+        background: url("../assets/fotos/upload.png") top center no-repeat #fff;
         background-size: 55px 55px
     }
 
@@ -544,7 +592,7 @@
         border: none;
         background-color: transparent;
         outline: none !important;
-        cursor: pointer;
+        cursor: default;
     }
 
     @media (min-width: 500px) {
@@ -565,12 +613,17 @@
         transform: translateX(-50%);
         transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
         transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
-        transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
-        border: 2px solid currentColor;
+        transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s,
+        -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+        border: 1px solid rgba(108, 117, 125, 0.7);
         border-radius: 50%;
         background-color: #fff;
         box-sizing: border-box;
         z-index: 3;
+    }
+
+    .multisteps-form__progress > button {
+        cursor: default;
     }
 
     .multisteps-form__progress-btn:after {
@@ -594,7 +647,8 @@
     }
 
     .multisteps-form__progress-btn.js-active {
-        color: #007bff;
+        /*color: #007bff;*/
+        color: theme-color('primary');
     }
 
     .multisteps-form__progress-btn.js-active:before {
@@ -621,6 +675,19 @@
         height: auto;
         opacity: 1;
         visibility: visible;
+    }
+
+    a.text_passiv {
+        color: rgba(108, 117, 125, 0.7);
+        text-decoration: none;
+        cursor: default;
+
+    }
+
+    a.text_active {
+        color: #2c3e50;
+        text-decoration: none;
+        cursor: default;
     }
 
 </style>

@@ -17,7 +17,7 @@ export const rooms = [
             },
             {
                 "id": 2,
-                "name": "Fehrnseher",
+                "name": "Fernseher",
                 "volumen": 1.5,
                 "abbaubar": false
             },
@@ -47,7 +47,7 @@ export const rooms = [
             },
             {
                 "id": 2,
-                "name": "Fehrnseher",
+                "name": "Fernseher",
                 "volumen": 1.5,
                 "abbaubar": false
             },
