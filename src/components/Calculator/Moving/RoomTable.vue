@@ -61,7 +61,7 @@
 </template>
 
 <script>
-    import {rooms} from '../assets/rooms'
+    import {rooms} from '../../../assets/rooms'
     import RoomTableRow from "./RoomTableRow";
     import uniqueId from 'lodash.uniqueid';
 

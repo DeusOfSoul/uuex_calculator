@@ -1,10 +1,11 @@
 <template>
-    
+
+  SonderleistungenTable
 </template>
 
 <script>
     export default {
-        name: "SonderleistungTableRow"
+        name: "SonderleistungTable"
     }
 </script>
 

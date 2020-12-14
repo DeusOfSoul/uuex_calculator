@@ -299,7 +299,7 @@
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
-                      <img src="../assets/fotos/interior-1961070_640.jpg" class="card-img-top">
+                      <img src="../../assets/fotos/interior-1961070_640.jpg" class="card-img-top">
                       <div class="card-body">
                         <div class="form-group">
                           <label for="description">Beschreibung:</label>
@@ -407,15 +407,14 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
 import {reactive} from 'vue';
-import RoomTable from "../components/RoomTable";
+import RoomTable from "../../components/Calculator/Moving/RoomTable";
 import {rooms} from '@/assets/rooms'
 import {objects} from "@/assets/objects";
-import ObjetTable from "@/components/Garbage/ObjetTable";
+import ObjetTable from "@/components/Calculator/Garbage/ObjetTable";
 
 export default {
   name: "Calculator",
@@ -480,7 +479,7 @@ export default {
   display: inline-block;
   width: 100%;
   padding: 95px 0 0 100%;
-  background: url("../assets/fotos/upload.png") top center no-repeat #fff;
+  background: url("../../assets/fotos/upload.png") top center no-repeat #fff;
   background-size: 55px 55px
 }
 
@@ -572,8 +571,8 @@ export default {
 
 .multisteps-form__panel {
   position: absolute;
-  top: 0;
-  left: 0;
+  //top: 0;
+  //left: 0;
   width: 100%;
   height: 0;
   opacity: 0;

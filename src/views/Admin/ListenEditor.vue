@@ -1,11 +1,11 @@
 <template>
-    Hello
+  ListenEditor
 </template>
 
 <script>
-    export default {
-        name: "Admin"
-    }
+export default {
+name: "ListenEditor"
+}
 </script>
 
 <style scoped>

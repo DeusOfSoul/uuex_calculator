@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import ObjectTableRow from "@/components/Garbage/ObjectTableRow";
+import ObjectTableRow from "@/components/Calculator/Garbage/ObjectTableRow";
 import uniqueId from "lodash.uniqueid";
 
 export default {
