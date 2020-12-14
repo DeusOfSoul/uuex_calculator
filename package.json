@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "bootstrap-icons": "^1.2.1",
     "bootstrap-steps": "^1.0.3",
     "bootstrap-vue": "^2.20.1",
     "connect-history-api-fallback": "^1.6.0",

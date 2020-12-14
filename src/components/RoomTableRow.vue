@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <td>1</td>
+        <th scope="row" class="text-center">{{roomid}}</th>
         <!-- Name-->
         <td>{{name}}</td>
         <!-- Anzahl-->
@@ -37,7 +37,7 @@
                 id: uniqueId('box-')
             }
         },
-        props: ['name', 'abbaubar', 'volumen']
+        props: ['name', 'abbaubar', 'volumen', 'roomid']
     }
 </script>
 

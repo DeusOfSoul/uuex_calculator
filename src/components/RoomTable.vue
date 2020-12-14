@@ -22,14 +22,14 @@
             <div class="collapse" :id="id">
                 <div class="card-body">
                     <div class="table-responsive-sm">
-                        <table class="table table-striped table-sm table-bordered">
+                        <table class="table table-striped table-bordered">
                             <thead>
                             <tr>
-                                <th class="col-sm-1">#</th>
-                                <th class="col-sm-4">Möbel</th>
-                                <th class="col-sm-2">Anzahl</th>
-                                <th class="col-sm-2">Volumen in m³</th>
-                                <th class="col-sm-2 text-center">
+                                <th class="text-center">#</th>
+                                <th class="">Möbel</th>
+                                <th class="">Anzahl</th>
+                                <th class="">Volumen in m³</th>
+                                <th class="text-center">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input"
                                                id="tableDefaultCheck11">
@@ -46,6 +46,7 @@
                                     :abbaubar="teil.abbaubar"
                                     :name="teil.name"
                                     :volumen="teil.volumen"
+                                    :roomid="teil.id"
                             />
                             </tbody>
                         </table>
