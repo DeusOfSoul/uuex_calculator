@@ -5,7 +5,8 @@
       <select class="form-control">
         <option value="1" selected>Möbel</option>
         <option value="2">Zimmer</option>
-        <option value="2">Objekte</option>
+        <option value="2">Entrümpelungs
+          Objekte</option>
         <option value="2">Sonderleistungen</option>
       </select>
     </div>
@@ -19,14 +20,19 @@
   </nav>
   <hr class="my-4">
   <moebel-liste-component></moebel-liste-component>
-
+  <hr class="my-4">
+  <object-list-component></object-list-component>
+  <hr class="my-4">
+  <room-list-component/>
 </template>
 
 <script>
 import MoebelListeComponent from "../../components/Admin/MoebelListeComponent";
+import ObjectListComponent from "../../components/Admin/ObjectListComponent";
+import RoomListComponent from "../../components/Admin/RoomListComponent";
 export default {
 name: "ListenEditor",
-  components: {MoebelListeComponent}
+  components: {RoomListComponent, ObjectListComponent, MoebelListeComponent}
 }
 </script>
 

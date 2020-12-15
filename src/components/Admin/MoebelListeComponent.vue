@@ -6,15 +6,9 @@
                 <th class="text-center">#</th>
                 <th class="">Möbel</th>
                 <th class="">Volumen in m³</th>
-                <th class="text-center">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"
-                               id="tableDefaultCheck11">
-                        <label class="custom-control-label"
-                               for="tableDefaultCheck11">Auf-/Abbau</label>
-                    </div>
-                </th>
+                <th class="text-center">Auf-/Abbaubar</th>
                 <th class="">Preis Auf-/Abbau in €</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -40,9 +34,14 @@
                     <!-- Anzahl-->
                     <td>
                         <div>
-                            <input type="number" class="form-control" min="0"
+                            <input type="text" class="form-control" min="0"
                                    value="0">
                         </div>
+                    </td>
+                    <td>
+                        <button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </td>
                 </tr>
             </tbody>
