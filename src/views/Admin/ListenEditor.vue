@@ -19,10 +19,13 @@
     </div>
   </nav>
   <hr class="my-4">
-  <moebel-liste-component></moebel-liste-component>
+  <h4>Möbel</h4>
+  <moebel-liste-component/>
   <hr class="my-4">
-  <object-list-component></object-list-component>
+  <h4>Umzugsobjekte</h4>
+  <object-list-component/>
   <hr class="my-4">
+  <h4>Räume</h4>
   <room-list-component/>
 </template>
 

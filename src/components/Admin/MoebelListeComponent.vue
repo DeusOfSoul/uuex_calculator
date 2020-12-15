@@ -1,17 +1,18 @@
 <template>
-    <div class="table-responsive-sm">
-        <table class="table table-striped table-bordered">
-            <thead>
-            <tr>
-                <th class="text-center">#</th>
-                <th class="">Möbel</th>
-                <th class="">Volumen in m³</th>
-                <th class="text-center">Auf-/Abbaubar</th>
-                <th class="">Preis Auf-/Abbau in €</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
+    <div class="card">
+        <div class="table-responsive-sm">
+            <table class="table table-striped table-bordered mb-0">
+                <thead>
+                <tr>
+                    <th class="text-center">#</th>
+                    <th class="">Möbel</th>
+                    <th class="">Volumen in m³</th>
+                    <th class="text-center">Auf-/Abbaubar</th>
+                    <th class="">Preis Auf-/Abbau in €</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
                 <tr v-for="moebel in moebelListe" :key="moebel.id">
                     <th scope="row" class="text-center">{{moebel.id}}</th>
                     <!-- Name-->
@@ -44,9 +45,11 @@
                         </button>
                     </td>
                 </tr>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
+
 </template>
 
 <script>

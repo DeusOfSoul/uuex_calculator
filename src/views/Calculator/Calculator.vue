@@ -316,7 +316,7 @@
                           <div class="col-md-12 col-lg-10 col-12">
                             <div class="form-group files"
                                  data-before="Zieh dein Foto hierher oder klicken sie auf den obigen Button">
-                              <label class="my-auto">Laden sie ihr Bild hoch</label>
+                              <label class="my-auto">Laden sie hier ihr Bild hoch</label>
                               <input id="file" type="file" class="form-control"/>
                             </div>
                           </div>
@@ -389,7 +389,7 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="agb">
                     <label class="form-check-label" for="agb">
-                      Hiermit akzeptiere ich die AGBs und Datenschutz !!!!!!!!!!!!!! (nachbessern)
+                      Hiermit akzeptiere ich die AGBs und den Datenschutz.
                     </label>
                   </div>
                 </div>
