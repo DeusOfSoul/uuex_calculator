@@ -6,34 +6,13 @@ import Login from "../views/Admin/Login";
 import Home from "@/views/Admin/Home";
 import Angebote from "@/views/Admin/Angebote";
 import ListenEditor from "@/views/Admin/ListenEditor";
+import CalculatorEditor from "../views/Admin/CalculatorEditor";
 
 const routes = [
   {
-    path: '/',
+    path: '/start',
     name: 'start',
     component: Start
-  },
-  {
-    path: '/admin',
-    name: 'admin',
-    component: Admin,
-    children: [
-      {
-        path: 'home',
-        name: 'start',
-        component: Home
-      },
-      {
-        path: 'angebote',
-        name: 'angebote',
-        component: Angebote
-      },
-      {
-        path: 'listeneditor',
-        name: 'listeneditor',
-        component: ListenEditor
-      }
-    ]
   },
   {
     path: '/calculator',
@@ -44,6 +23,33 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+  {
+    path: '/admin',
+    component: Admin,
+    redirect: 'home',
+    children: [
+      {
+        path: '/home',
+        component: Home
+      },
+      {
+        path: '/angebote',
+        component: Angebote
+      },
+      {
+        path: '/listeneditor',
+        component: ListenEditor
+      },
+      {
+        path: '/calculatoreditor',
+        component: CalculatorEditor
+      }
+    ]
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: {name: "start"}
   }
 ]
 

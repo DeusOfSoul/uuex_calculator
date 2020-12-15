@@ -412,9 +412,9 @@
 <script>
 import {reactive} from 'vue';
 import RoomTable from "../../components/Calculator/Moving/RoomTable";
-import {rooms} from '@/assets/rooms'
-import {objects} from "@/assets/objects";
 import ObjetTable from "@/components/Calculator/Garbage/ObjetTable";
+import {rooms} from "../../assets/data/rooms";
+import {objects} from "../../assets/data/objects";
 
 export default {
   name: "Calculator",

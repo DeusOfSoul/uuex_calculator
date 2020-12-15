@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <router-link to="login">
+          <router-link :to="{ path: 'home'}">
             <a class="nav-link" >Home<span class="sr-only">(current)</span></a>
           </router-link>
         </li>
@@ -18,25 +18,29 @@
              aria-haspopup="true" aria-expanded="false">
             Angebote</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownAngebote">
-            <router-link to="login">
+            <router-link :to="{ path: 'angebote'}">
               <a class="dropdown-item">Neu</a>
             </router-link>
-            <router-link to="login">
+            <router-link :to="{ path: 'angebote'}">
               <a class="dropdown-item">In Bearbeitung</a>
             </router-link>
-            <router-link to="login">
+            <router-link :to="{ path: 'angebote'}">
               <a class="dropdown-item">Alle</a>
             </router-link>
-            <router-link to="login">
+            <router-link :to="{ path: 'angebote'}">
               <a class="dropdown-item">Abgeschlossen</a>
             </router-link>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Kalkulator</a>
+          <router-link to="calculatoreditor">
+            <a class="nav-link" href="#">Kalkulator</a>
+          </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Listen</a>
+          <router-link to="listeneditor">
+            <a class="nav-link" href="#">Listen</a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -49,11 +53,8 @@
 
   <!-- Page Content -->
   <div class="jumbotron">
-    <router-view></router-view>
+    <router-view/>
   </div>
-
-
-
 </template>
 
 <script>
