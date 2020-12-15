@@ -1,5 +1,6 @@
 <template>
-  Home
+  <h1 class="display-4">Übersicht</h1>
+  <hr class="my-4">
 </template>
 
 <script>

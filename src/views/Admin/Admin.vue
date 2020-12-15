@@ -52,7 +52,7 @@
   </nav>
 
   <!-- Page Content -->
-  <div class="jumbotron">
+  <div class="jumbotron p-4">
     <router-view/>
   </div>
 </template>
