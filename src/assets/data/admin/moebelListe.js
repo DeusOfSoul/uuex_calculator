@@ -46,19 +46,19 @@ export const moebelListe = [
         id: 9,
         name: "Eck-Couch",
         volume: 9.5,
-        abbaubar: True
+        abbaubar: true
     },
     {
         id: 10,
         name: "Eck-Bank",
         volume: 6,
-        abbaubar: True
+        abbaubar: true
     },
     {
         id: 11,
         name: "Schrank-groß",
         volume: 3.5,
-        abbaubar: True
+        abbaubar: true
     },
     {
         id: 13,
