@@ -21,19 +21,19 @@
                     <td>
                         <div>
                             <input type="text" class="form-control" min="0"
-                                   :value="object.preisNormal">
+                                   :value="object.multNormal">
                         </div>
                     </td>
                     <td>
                         <div>
                             <input type="text" class="form-control" min="0"
-                                   :value="object.preisExtrem">
+                                   :value="object.multExtrem">
                         </div>
                     </td>
                     <td>
                         <div>
                             <input type="text" class="form-control" min="0"
-                                   :value="object.preisMessi" >
+                                   :value="object.multMessi" >
                         </div>
                     </td>
                     <td class="text-center">
