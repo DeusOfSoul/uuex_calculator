@@ -5,18 +5,38 @@ export const roomList =[
     },
     {
         id: 2,
-        name: "Wohnzimmer"
+        name: "Schlafzimmer"
     },
     {
         id: 3,
-        name: "Wohnzimmer"
+        name: "Küche"
     },
     {
         id: 4,
-        name: "Wohnzimmer"
+        name: "Badezimmer"
     },
     {
         id: 5,
-        name: "Wohnzimmer"
+        name: "Esszimmer"
     },
+    {
+        id: 6,
+        name: "keller"
+    },
+    {
+        id: 7,
+        name: "Garten"
+    },
+    {
+        id: 8,
+        name: "Wintergarten"
+    },
+    {
+        id: 8,
+        name: "Gemeinschaftsraum"
+    },
+    {
+        id: 9,
+        name: "Zimmer"
+    }
 ]
