@@ -113,5 +113,29 @@ export const moebelListe = [
         name: "Nachttisch",
         volume: 0.5,
         abbaubar: false
+    },
+    {
+        id: 22,
+        name: "Einzelbett",
+        volume: 2,5,
+        abbaubar: true
+    },
+    {
+        id: 23,
+        name: "Doppelbett",
+        volume: 3.5,
+        abbaubar: true
+    },
+    {
+        id: 24,
+        name: "Kühlschrank",
+        volume: 3.0,
+        abbaubar: false
+    },
+    {
+        id: 25,
+        name: "Tisch-groß",
+        volume: 5.5,
+        abbaubar: true
     }
 ]
