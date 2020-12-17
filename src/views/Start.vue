@@ -2,7 +2,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <router-link to="login">
+                <router-link to="/login">
                     <button class="btn btn-primary">Admin</button>
                 </router-link>
             </div>
@@ -10,7 +10,7 @@
         <br>
         <div class="card">
             <div class="card-body">
-                <router-link to="calculator">
+                <router-link to="/calculator">
                     <button class="btn btn-primary">Rechner</button>
                 </router-link>
             </div>

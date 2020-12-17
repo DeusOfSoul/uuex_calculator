@@ -2,7 +2,7 @@
     <h1 class="display-4">Angebotsübersicht</h1>
     <nav class="d-flex align-items-start justify-content-between flex-wrap">
         <div class="col-sm-3">
-            <select class="form-control">
+            <select class="form-control" v-model="selected">
                 <option value="1" selected>Alle</option>
                 <option value="2">Neu</option>
                 <option value="2">In Bearbeitung</option>
@@ -19,9 +19,9 @@
     </nav>
     <hr class="my-4">
     <angebot
-            v-for="angebot in angeboteListe"
-            :key="angebot.id"
-            :angebot="angebot"
+        v-for="angebot in angeboteListe"
+        :key="angebot.id"
+        :angebot="angebot"
     />
 </template>
 
@@ -33,8 +33,10 @@
         name: "Angebote",
         components: {Angebot},
         data() {
+            let selected = 1;
             return {
-                angeboteListe
+                angeboteListe,
+                selected
             }
         }
     }

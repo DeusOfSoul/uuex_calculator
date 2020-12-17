@@ -38,7 +38,6 @@
       <div class="row">
         <div class=" col m-auto">
           <form class="multisteps-form__form">
-
             <!-- Startseite -->
             <div v-bind:class="{'js-active' : state.currentPage === 1}"
                  class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
@@ -436,7 +435,6 @@ export default {
         state.currentWorkType = value
       }
       state.currentPage++;
-      console.log(state.currentWorkType);
     }
 
     function backStep() {

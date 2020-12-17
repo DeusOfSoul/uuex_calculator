@@ -92,7 +92,7 @@ export const angeboteListe = [
                         "id": 11,
                         "name": "Schrank-groß",
                         "anzahl": 2,
-                        "volumen": 3.5.5,
+                        "volumen": 3.5,
                         "abbauen": true,
                         "entsorgen": true
                     },
@@ -245,7 +245,7 @@ export const angeboteListe = [
                         "id": 11,
                         "name": "Schrank-groß",
                         "anzahl": 2,
-                        "volumen": 3.5.5,
+                        "volumen": 3.5,
                         "abbauen": true,
                         "entsorgen": true
                     },

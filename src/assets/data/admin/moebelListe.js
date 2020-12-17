@@ -117,7 +117,7 @@ export const moebelListe = [
     {
         id: 22,
         name: "Einzelbett",
-        volume: 2,5,
+        volume: 2.5,
         abbaubar: true
     },
     {

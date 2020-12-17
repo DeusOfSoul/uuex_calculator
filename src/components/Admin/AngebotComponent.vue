@@ -8,16 +8,21 @@
                             v-bind:class="{
                             'btn-secondary': angebot.status === 'Abgeschlossen',
                             'btn-success': angebot.status === 'Neu',
-                            'btn-primary': angebot.status === 'In Bearbeitung',
-                        }
-                        "
+                            'btn-primary': angebot.status === 'In Bearbeitung',}"
                             class="btn btn-secondary">{{angebot.status}}</button>
                 </div>
             </div>
-            <h5>#{{angebot.number}}</h5>
+            <h5>#{{angebot.number}} (Umzug)</h5>
         </div>
         <div class="card-body">
-
+            <h4>Grunddaten</h4>
+            <hr class="my-4">
+            <h4>Objektangaben</h4>
+            <hr class="my-4">
+            <h4>Sonderleistungen</h4>
+            <hr class="my-4">
+            <h4>Bilder</h4>
+            <hr class="my-4">
         </div>
     </div>
 

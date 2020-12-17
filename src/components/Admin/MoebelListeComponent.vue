@@ -17,7 +17,6 @@
                     <th scope="row" class="text-center">{{moebel.id}}</th>
                     <!-- Name-->
                     <td>{{moebel.name}}</td>
-
                     <!-- Volumen-->
                     <td>
                         <div>
