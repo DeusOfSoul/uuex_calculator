@@ -27,7 +27,7 @@
           <!--Abbaubar-->
           <td>
             <div class="custom-control custom-checkbox text-center">
-              <input type="checkbox" class="custom-control-input" :checked="moebel.abbaubar" :id="id+'-'+moebel.id">
+              <input type="checkbox" class="custom-control-input" v-model="moebel.abbaubar"  :checked="moebel.abbaubar" :id="id+'-'+moebel.id">
               <label class="custom-control-label" :for="id+'-'+moebel.id"></label>
             </div>
           </td>
