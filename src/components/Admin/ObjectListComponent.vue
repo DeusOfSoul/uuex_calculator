@@ -37,8 +37,8 @@
             </div>
           </td>
           <td class="text-center">
-            <button class="btn btn-light" aria-label="Close">
-              - Löschen
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
             </button>
           </td>
         </tr>
@@ -66,8 +66,8 @@
             </div>
           </td>
           <td class="text-center">
-            <button class="btn btn-light" aria-label="Close">
-              + Hinzufügen
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">+</span>
             </button>
           </td>
         </tr>
