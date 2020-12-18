@@ -37,7 +37,7 @@
       <!--form panels-->
       <div class="row">
         <div class=" col m-auto">
-          <form class="multisteps-form__form">
+          <form class="multisteps-form__form" v-on:submit.prevent>
             <!-- Startseite -->
             <div v-bind:class="{'js-active' : state.currentPage === 1}"
                  class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
