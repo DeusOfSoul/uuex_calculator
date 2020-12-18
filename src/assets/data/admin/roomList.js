@@ -21,7 +21,7 @@ export const roomList =[
     },
     {
         id: 6,
-        name: "keller"
+        name: "Keller"
     },
     {
         id: 7,

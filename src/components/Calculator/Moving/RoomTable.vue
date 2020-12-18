@@ -11,7 +11,7 @@
                                 :aria-controls="id">
                             {{room.name}}
                         </h4>
-                        <h5>20m³</h5>
+                        <h5>{{room.volume}}m³</h5>
                     </div>
                     <button type="button" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>

@@ -1,4 +1,7 @@
 <template>
+  <div class="form-group row">
+
+  </div>
     <div v-for="room in roomList" :key="room.id">
         <div class="card">
             <div class="card-header">

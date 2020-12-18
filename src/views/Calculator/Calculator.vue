@@ -2,7 +2,7 @@
   <br>
   <div class="container">
     <div class="multisteps-form">
-      <!--progress bar-->
+      <!-- progress bar -->
       <div class="row">
         <div class="col-14 col-lg-8 ml-auto mr-auto mb-4">
           <div class="multisteps-form__progress">
@@ -66,8 +66,9 @@
             <div v-bind:class="{'js-active' : state.currentPage === 2}"
                  class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
               <h1 class="multisteps-form__title">Grunddaten</h1>
+              <hr class="my-2">
               <div>
-                <h4 v-if="state.workTypes.moving === state.currentWorkType"> Startort</h4>
+                <h4 v-if="state.workTypes.moving === state.currentWorkType">Startort</h4>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputCity">Stadt</label>
@@ -77,7 +78,6 @@
                     <label for="inputZip">PLZ</label>
                     <input type="text" class="form-control" id="inputZip">
                   </div>
-
                   <div v-if="state.workTypes.moving === state.currentWorkType" class="form-group col-md-4">
                     <label for="inputWohnung">Objektart</label>
                     <select id="inputWohnung" class="form-control">
@@ -91,8 +91,35 @@
                     <input type="number" class="form-control" id="etage">
                   </div>
                 </div>
+                <fieldset class="form-group">
+                  <div class="">
+                    <legend class="col-form-label pt-0">Wird eine Sonderhaltezone vor ihrem Objekt benötigt? (Preis
+                      70€)
+                    </legend>
+                    <div class="col-sm-10">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="starthalt" id="starthaltja" value="option1">
+                        <label class="form-check-label" for="starthaltja">ja</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="starthalt" id="starthaltnein"
+                               value="option2">
+                        <label class="form-check-label" for="starthaltnein">nein</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="form-group">
+                  <label for="dist">Distanz zwischen Haltezone und Ihrem Objekt</label>
+                  <div class="input-group  col-sm-2">
+                    <input type="number" class="form-control" id="dist">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">m</div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-2">
                 <div v-if="state.workTypes.moving === state.currentWorkType">
-                  <br>
                   <h4>Zielort</h4>
                   <div class="form-row">
                     <div class="form-group col-md-6">
@@ -116,7 +143,34 @@
                       <input type="number" class="form-control" id="etage2">
                     </div>
                   </div>
-                  <br>
+                  <fieldset class="form-group">
+                    <div class="">
+                      <legend class="col-form-label pt-0">Wird eine Sonderhaltezone vor ihrem Objekt benötigt? (Preis
+                        70€)
+                      </legend>
+                      <div class="col-sm-10">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="starthalt2" id="starthaltja2" value="option1">
+                          <label class="form-check-label" for="starthaltja2">ja</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="starthalt2" id="starthaltnein2"
+                                 value="option2">
+                          <label class="form-check-label" for="starthaltnein2">nein</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-group">
+                    <label for="dist2">Distanz zwischen Haltezone und Ihrem Objekt</label>
+                    <div class="input-group  col-sm-2">
+                      <input type="number" class="form-control" id="dist2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">m</div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-2">
                   <div class="form-row">
                     <div class="col-md-4">
                       <label for="distance">Distanz zwischen Start und Zielort</label>
@@ -139,8 +193,8 @@
                     <input type="date" class="form-control" id="date">
                   </div>
                 </div>
-
               </div>
+              <hr class="my-2">
               <div class="d-flex justify-content-between mt-4">
                 <div>
                   <button v-on:click="backStep" class="btn btn-secondary " type="button"
@@ -168,7 +222,7 @@
               <div class="d-flex justify-content-between align-self-center">
                 <h1 class="multisteps-form__title">Objektangaben</h1>
               </div>
-              <br>
+              <hr class="my-3">
 
               <!-- Moving -->
               <div v-if="state.currentWorkType === state.workTypes.moving">
@@ -205,7 +259,7 @@
                   <div class="form-group col-md-4">
                     <select class="form-control">
                       <option selected disabled>Wähle...</option>
-                      <option >Wohnzimmer</option>
+                      <option>Wohnzimmer</option>
                       <option>Schlafzimmer</option>
                       <option>Kinderzimmer</option>
                       <option>Esszimmer</option>
@@ -222,7 +276,7 @@
                 </div>
               </div>
 
-
+              <hr class="my-2">
               <div class="d-flex justify-content-between mt-4">
                 <div>
                   <button v-on:click="backStep" class="btn btn-secondary " type="button"
@@ -244,25 +298,44 @@
               </div>
             </div>
 
-            <!--single form panel-->
+            <!-- Sonderleistungen -->
             <div v-bind:class="{'js-active' : state.currentPage === 4}"
                  class="multisteps-form__panel shadow p-4 rounded bg-white"
                  data-animation="scaleIn">
               <h3>Sonderleistungen</h3>
+              <hr class="my-2">
               <div class="multisteps-form__content">
 
                 <!-- Moving -->
                 <div v-if="state.currentWorkType === state.workTypes.moving">
+                  <!-- TODO hier noch erweitern -->
 
+                  <!-- Sonderhaltezone -->
+                  <div class="form-group">
+                    <label>Möchten Sie Umzugskartons ausleihen für 1€ pro Stück zzgl. 1€ Pfand?</label>
+                    <div class="row">
+                      <label class="col-auto col-form-label col-form-label-sm" for="karton">Anzahl:</label>
+                      <div class="col-auto">
+                        <input type="number" min="0" value="0" class="form-control" id="karton">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Wie viele Umzugskartons sollen wir für sie ein und auspacken?</label>
+                    <div class="row">
+                      <label class="col-auto col-form-label col-form-label-sm" for="packen">Anzahl:</label>
+                      <div class="col-auto">
+                        <input type="number" min="0" value="0" class="form-control" id="packen">
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Garbage -->
                 <div v-if="state.currentWorkType === state.workTypes.garbage">
 
                 </div>
-                <div class="row">
-
-                </div>
+                <hr class="my-2">
                 <div class="d-flex justify-content-between mt-4">
                   <div>
                     <button v-on:click="backStep" class="btn btn-secondary " type="button"
@@ -285,15 +358,18 @@
               </div>
             </div>
 
+            <!-- Bilder -->
             <div v-bind:class="{'js-active' : state.currentPage === 5}"
                  class="multisteps-form__panel shadow p-4 rounded bg-white"
                  data-animation="scaleIn">
               <h3>Bilder hinzufügen</h3>
+              <hr class="my-3">
               <div class="multisteps-form__content">
                 <div class="row">
                   <div class="col-12 col-md-6 mt-4">
                     <div class="card shadow-sm">
-                      <div class="card-header">
+                      <div class="card-header d-flex justify-content-between">
+                        <p class="p-0">wohnzimmer.jpg</p>
                         <button type="button" class="close" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -326,6 +402,7 @@
                     </div>
                   </div>
                 </div>
+                <hr class="my-3">
                 <div class="d-flex justify-content-between mt-4">
                   <div>
                     <button v-on:click="backStep" class="btn btn-secondary " type="button"
@@ -348,12 +425,13 @@
               </div>
             </div>
 
-            <!--single form panel-->
+            <!-- Bestätigung -->
             <div v-bind:class="{'js-active' : state.currentPage === 6 }"
                  class="multisteps-form__panel shadow p-4 rounded bg-white " data-animation="scaleIn">
-              <h3 class="multisteps-form__title">Bestätigen</h3>
+              <h3 class="multisteps-form__title">Bestätigung</h3>
+              <hr class="my-2">
               <div class="multisteps-form__content">
-                <p>Netter Text um Kunden zum Angebot zu verleiten</p>
+                <p>Netter Text um Kunden zum Angebot zu verleiten. (von Ihnen anpassbar im Backend)</p>
                 <div class="form-row">
                   <div class="form-group col-md-2">
                     <label for="anrede">Anrede</label>
@@ -361,6 +439,7 @@
                       <option selected disabled>Wähle...</option>
                       <option>Frau</option>
                       <option>Herr</option>
+                      <option>Keine Angabe</option>
                     </select>
                   </div>
                   <div class="form-group col-md-4">
@@ -393,7 +472,7 @@
                   </div>
                 </div>
                 <button class="btn-warning btn">kostenloses Angebot anfordern</button>
-
+                <hr class="my-2">
                 <div class="button-row d-flex mt-4">
                   <button v-on:click="backStep" class="btn btn-secondary " type="button"
                           title="Zurück">Zurück

@@ -2,6 +2,7 @@ export const rooms = [
     {
         "id": 1,
         "name": "Wohnzimmer",
+        volume: 22,
         "moebel": [
             {
                 "id": 1,
@@ -10,12 +11,6 @@ export const rooms = [
                 "abbaubar": false
             },
             {
-                "id": 4,
-                "name": "1-türiger Schrank",
-                "volumen": 1.5,
-                "abbaubar": true
-            },
-            {
                 "id": 2,
                 "name": "Fernseher",
                 "volumen": 1.5,
@@ -23,7 +18,13 @@ export const rooms = [
             },
             {
                 "id": 3,
-                "name": "1-Türiger Schrank",
+                "name": "1-türiger Schrank",
+                "volumen": 1.5,
+                "abbaubar": true
+            },
+            {
+                "id": 4,
+                "name": "2-Türiger Schrank",
                 "volumen": 1.5,
                 "abbaubar": true
             }
@@ -32,6 +33,7 @@ export const rooms = [
     {
         "id": 2,
         "name": "Schlafzimmer",
+        volume: 16,
         "moebel": [
             {
                 "id": 1,
@@ -40,19 +42,19 @@ export const rooms = [
                 "abbaubar": false
             },
             {
-                "id": 4,
+                "id": 2,
                 "name": "Doppelbett + Matratze",
                 "volumen": 1.5,
                 "abbaubar": true
             },
             {
-                "id": 2,
+                "id": 3,
                 "name": "Fernseher",
                 "volumen": 1.5,
                 "abbaubar": false
             },
             {
-                "id": 3,
+                "id": 4,
                 "name": "1-Türiger Kleiderschrank",
                 "volumen": 1.5,
                 "abbaubar": true

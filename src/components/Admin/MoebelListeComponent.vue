@@ -44,6 +44,36 @@
                         </button>
                     </td>
                 </tr>
+                <tr>
+                  <th scope="row" class="text-center"/>
+                  <td>
+                    <div>
+                      <input type="text" class="form-control" min="0">
+                    </div>
+                  </td>
+                  <!-- Anzahl-->
+                  <td>
+                    <div>
+                      <input type="text" class="form-control" min="0">
+                    </div>
+                  </td>
+                  <td>
+                    <div class="custom-control custom-checkbox text-center">
+                      <input type="checkbox" class="custom-control-input" :id="id + '-add'" >
+                      <label class="custom-control-label" :for="id + '-add'"></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <input type="text" class="form-control" min="0">
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button type="button" class="close" aria-label="Hinzufügen">
+                    <span aria-hidden="true">+</span>
+                  </button>
+                  </td>
+                </tr>
                 </tbody>
             </table>
         </div>
