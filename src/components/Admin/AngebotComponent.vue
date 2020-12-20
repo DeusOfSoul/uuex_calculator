@@ -19,8 +19,8 @@
             <button
                 v-bind:class="{
                             'btn-secondary': angebot.status === 'Abgeschlossen',
-                            'btn-success': angebot.status === 'Neu',
-                            'btn-primary': angebot.status === 'In Bearbeitung'}"
+                            'btn-primary': angebot.status === 'Neu',
+                            'btn-success': angebot.status === 'In Bearbeitung'}"
                 class="btn">{{ angebot.status }}
             </button>
           </div>
@@ -62,7 +62,7 @@
             <div class="col-2">{{ angebot.grunddaten.start.plz + ' ' + angebot.grunddaten.start.ort }}</div>
           </div>
           <div class="form-row">
-            <div class="col-2">Distanz zum Parkplatz:</div>
+            <div class="col-2">Distanz zur Haltezone:</div>
             <div class="col-2">{{ angebot.grunddaten.start.distanceToParkingSpot }}m</div>
           </div>
           <div class="form-row">
@@ -76,7 +76,7 @@
             <div class="col-2">{{ angebot.grunddaten.end.plz + ' ' + angebot.grunddaten.end.ort }}</div>
           </div>
           <div class="form-row">
-            <div class="col-2">Distanz zum Parkplatz:</div>
+            <div class="col-2">Distanz zur Haltezone:</div>
             <div class="col-2">{{ angebot.grunddaten.end.distanceToParkingSpot }}m</div>
           </div>
           <div class="form-row">
@@ -247,7 +247,6 @@ export default {
     return {
       id: uniqueId('angebot-')
     }
-
   },
 
   props: ['angebot']

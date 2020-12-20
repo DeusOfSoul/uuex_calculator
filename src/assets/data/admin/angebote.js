@@ -7,7 +7,7 @@ export const angeboteListe = [
         status: 'Neu',
         type: "Umzug",
         price: 1200,
-        volume: 30,
+        volume: 67,
         grunddaten: {
             start: {
                 ort: "Wittlich",

@@ -8,6 +8,7 @@
         <option value=3>Entrümpelungs Objekte</option>
         <option value="4">Sonderleistungen</option>
         <option value="5">Fahrzeuge</option>
+        <option value="6">Umzugsarten</option>
       </select>
     </div>
     <div class="input-group col-sm-4">
@@ -34,11 +35,15 @@
   </div>
   <div v-if="state.selected == 4">
     <h4>Sonderleistungen</h4>
-
+    <sonderleistungen-component/>
   </div>
   <div v-if="state.selected == 5">
     <h4>Fahrzeuge</h4>
     <vehicle-list-component></vehicle-list-component>
+  </div>
+  <div v-if="state.selected == 6">
+    <h4>Umzugsarten</h4>
+    <umzugsarten-liste></umzugsarten-liste>
   </div>
 </template>
 
@@ -48,22 +53,20 @@ import ObjectListComponent from "../../components/Admin/ObjectListComponent";
 import RoomListComponent from "../../components/Admin/RoomListComponent";
 import {reactive} from "vue";
 import VehicleListComponent from "@/components/Admin/VehicleListComponent";
+import UmzugsartenListe from "@/components/Admin/UmzugsartenListe";
+import SonderleistungenComponent from "@/components/Admin/SonderleistungenComponent";
 export default {
 name: "ListenEditor",
-  components: {VehicleListComponent, RoomListComponent, ObjectListComponent, MoebelListeComponent},
+  components: {
+    SonderleistungenComponent,
+    UmzugsartenListe, VehicleListComponent, RoomListComponent, ObjectListComponent, MoebelListeComponent},
   setup(){
     const state = reactive({
       selected: 1,
     });
 
-    function onChange(event) {
-      state.selected = event.target.value;
-      console.log(state.selected);
-    }
-
     return{
-      state,
-      onChange
+      state
     }
   }
 }

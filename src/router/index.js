@@ -27,7 +27,7 @@ const routes = [
   {
     path: '/admin',
     component: Admin,
-    redirect: 'home',
+    redirect: 'angebote',
     children: [
       {
         path: '/home',

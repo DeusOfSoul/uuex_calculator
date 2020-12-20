@@ -42,7 +42,7 @@
             <div v-bind:class="{'js-active' : state.currentPage === 1}"
                  class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
               <h1 class="multisteps-form__title">Auswahl</h1>
-              <p>Hier noch einen netten Text zur Begrüßung hinzufügen</p>
+              <p>Hier Ihr netter Text zur Begrüßung der Kunden.</p>
               <div class="d-flex flex-column align-items-center">
                 <div class="">
                   <button v-on:click="nextStep(state.workTypes.moving)" class="btn btn-primary">

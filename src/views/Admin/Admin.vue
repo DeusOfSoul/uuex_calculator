@@ -8,18 +8,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <router-link :to="{ path: 'home'}">
-            <a class="nav-link" >Home<span class="sr-only">(current)</span></a>
-          </router-link>
-        </li>
+<!--        <li class="nav-item active">-->
+<!--          <router-link :to="{ path: 'home'}">-->
+<!--            <a class="nav-link" >Home<span class="sr-only">(current)</span></a>-->
+<!--          </router-link>-->
+<!--        </li>-->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAngebote" role="button" data-toggle="dropdown"
              aria-haspopup="true" aria-expanded="false">
-            Angebote</a>
+            Angebote<span class="ml-1 badge badge-primary badge-pill">1</span></a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownAngebote">
             <router-link :to="{ path: 'angebote'}">
-              <a class="dropdown-item">Neu</a>
+              <a class="dropdown-item">Neu <span class="ml-1 badge badge-primary badge-pill">1</span></a>
             </router-link>
             <router-link :to="{ path: 'angebote'}">
               <a class="dropdown-item">In Bearbeitung</a>
@@ -32,15 +32,18 @@
             </router-link>
           </div>
         </li>
-        <li class="nav-item">
-          <router-link to="calculatoreditor">
-            <a class="nav-link" href="#">Kalkulator</a>
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="listeneditor">
-            <a class="nav-link" href="#">Listen</a>
-          </router-link>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCalc" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Kalkulator</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownCalc">
+            <router-link :to="{ path: 'calculatoreditor'}">
+              <a class="dropdown-item">Allgemein</a>
+            </router-link>
+            <router-link :to="{ path: 'listeneditor'}">
+              <a class="dropdown-item">Listen</a>
+            </router-link>
+          </div>
         </li>
       </ul>
     </div>
