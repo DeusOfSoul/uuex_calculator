@@ -87,7 +87,7 @@
                     </select>
                   </div>
                   <div v-if="state.workTypes.moving === state.currentWorkType" class="form-group col-md-2">
-                    <label for="etage">Etage</label>
+                    <label for="etage">Etage(n)</label>
                     <input type="number" class="form-control" id="etage">
                   </div>
                 </div>
@@ -141,7 +141,7 @@
                       </select>
                     </div>
                     <div class="form-group col-md-2">
-                      <label for="etage2">Etage</label>
+                      <label for="etage2">Etage(n)</label>
                       <input type="number" class="form-control" id="etage2">
                     </div>
                   </div>
