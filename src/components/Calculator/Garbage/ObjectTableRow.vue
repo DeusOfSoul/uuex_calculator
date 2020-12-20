@@ -30,7 +30,7 @@
       </div>
     </td>
     <td>
-      <div>
+      <div v-if="levelneeded">
         <input type="number" class="form-control" min="0"
                value="0">
       </div>
@@ -53,7 +53,7 @@ export default {
       id: uniqueId('box-')
     }
   },
-  props: ['name', 'objectid']
+  props: ['name', 'levelneeded', 'objectid']
 }
 </script>
 

@@ -5,42 +5,27 @@
         <thead>
         <tr>
           <th class="text-center">#</th>
-          <th class="">Objekt</th>
-          <th class="">Preis Normal €/m²</th>
-          <th class="">Preis Extrem €/m²</th>
-          <th class="">Preis Messi €/m²</th>
-          <th class="text-center">Etagenangabe</th>
-          <th class="text-center"></th>
+          <th class="">Fahrklasse</th>
+          <th class="">Maximal Volumen in m³</th>
+          <th class="">Aufpreis in €/km</th>
         </tr>
         </thead>
         <tbody>
-        <tr v-for="object in objectListe" :key="object.id">
-          <th scope="row" class="text-center">{{ object.id }}</th>
+        <tr v-for="vehicle in vehicleList" :key="vehicle.id">
+          <th scope="row" class="text-center">{{ vehicle.id }}</th>
           <!-- Name-->
-          <td>{{ object.name }}</td>
-          <!-- Anzahl-->
+          <td>{{ vehicle.name }}</td>
+          <!-- Volumen-->
           <td>
             <div>
               <input type="text" class="form-control" min="0"
-                     :value="object.multNormal">
+                     :value="vehicle.volume">
             </div>
           </td>
           <td>
             <div>
               <input type="text" class="form-control" min="0"
-                     :value="object.multExtrem">
-            </div>
-          </td>
-          <td>
-            <div>
-              <input type="text" class="form-control" min="0"
-                     :value="object.multMessi">
-            </div>
-          </td>
-          <td>
-            <div class="custom-control custom-checkbox text-center">
-              <input type="checkbox" class="custom-control-input" :id="id + '-level-' + object.id">
-              <label class="custom-control-label" :for="id + '-level-' + object.id"></label>
+                     :value="vehicle.price">
             </div>
           </td>
           <td class="text-center">
@@ -67,17 +52,6 @@
               <input type="text" class="form-control" min="0">
             </div>
           </td>
-          <td>
-            <div>
-              <input type="text" class="form-control" min="0">
-            </div>
-          </td>
-          <td>
-            <div class="custom-control custom-checkbox text-center">
-              <input type="checkbox" class="custom-control-input" :id="id + '-level-new'">
-              <label class="custom-control-label" :for="id + '-level-new'"></label>
-            </div>
-          </td>
           <td class="text-center">
             <button type="button" class="close" aria-label="Close">
               <span aria-hidden="true">+</span>
@@ -88,23 +62,23 @@
       </table>
     </div>
   </div>
-
 </template>
 
 <script>
-import {objectListe} from "../../assets/data/admin/objectList";
 import uniqueId from "lodash.uniqueid";
+import {vehicleList} from "@/assets/data/admin/vehicleList";
 
 export default {
-  name: "ObjectListComponent",
-  components: {},
+  name: "VehicleListComponent",
   data() {
     return {
-      objectListe,
+      vehicleList,
       id: uniqueId('box-')
     }
   }
 }
+
+
 </script>
 
 <style scoped>

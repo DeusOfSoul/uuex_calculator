@@ -41,6 +41,7 @@
           :key="index"
           :name="object.name"
           :objectid="index"
+          :levelneeded="object.levelNeeded"
       ></object-table-row>
       </tbody>
     </table>

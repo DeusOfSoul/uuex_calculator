@@ -95,7 +95,9 @@
                   <div class="">
                     <legend class="col-form-label pt-0">Wird eine Sonderhaltezone vor ihrem Objekt benötigt? (Preis
                       70€)
+                      <img src="@/assets/icons/question-circle.svg" alt="" width="16" height="16" title="Bootstrap">
                     </legend>
+
                     <div class="col-sm-10">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="starthalt" id="starthaltja" value="option1">
@@ -462,6 +464,10 @@
                     <label for="number">Telefonnummer (optional)</label>
                     <input type="text" class="form-control" id="number">
                   </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Anmerkung (optional)</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
                 </div>
                 <div class="form-group">
                   <div class="form-check">
